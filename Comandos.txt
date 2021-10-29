@@ -1,0 +1,49 @@
+docker image
+docker container
+docker volume
+docker image rm
+docker image rm redis:latest cod3r-redis
+docker container run -p 8080:80 nginx
+docker image tag redis:latest cod3r-redis
+docker image inspect redis:latest
+docker image tag redis:latest cod3r-redis
+
+docker image pull - baixar imagem
+
+docker container run - baixar a imagem (chama o pull) e executa a imagem
+
+docker image ls - listagem dos containeres
+
+docker image rm  {[nome da tag ou hash]} - remove as imagem
+
+docker image inspect {nome da tag} - informações da imagem
+
+docker image tag {imagem, redis por exemplo} {versão, latest por exemplo} - baixar versão da imagem
+
+docker image build - constroi a imagem
+
+docker image push - depois de criar, fazer o build, ou tag, publicar sua imagem 
+
+docker hub - Saas, na nuvem, disponibilizado pelo Docker, existe registry dentro dele, possui interface gráfica. Imagens oficiais, geradas pelo proprio pessoal do docker
+
+docker registry - Serviço para registro e obtenção de imagens, disponibiliza API para enviar/receber imagens. É possível tem um registry privado por empresa
+
+docker image build -t (nome e tag que você quer colocar) <nome da imagem> .(pasta atual) - O nome do arquivo sempre tem que ser Dockerfile
+
+docker container run -p 80:80 ex-simple-build - Executar o container, o -p é a porta de exibição
+
+docker run -d -p 80:8080 swaggerapi/swagger-editor
+
+docker start docker-jenkins-3 - Não monta o container novamente, apenas inicia ele (quando o container estiver desligado)
+
+docker logs docker-jenkins-3 // Mostra o log do container
+
+docker exect -it bash // Executar algo dentro do container
+
+docker-compose down - baixar
+
+docker-compose up - iniciar
+
+docker-compose logs
+
+docker-compose db psql -U postgres -d email_sender -c 'select * from emails'
